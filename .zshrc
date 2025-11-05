@@ -184,3 +184,11 @@ alias myproject='cd ~/projects/my-important-project'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Project navigation
+export PROJECTS="$HOME/projects"
+alias proj='cd $PROJECTS'
+alias personal='cd $PROJECTS/personal'
+alias work='cd $PROJECTS/work'
+alias learn='cd $PROJECTS/learning'
+alias play='cd $PROJECTS/playground'
