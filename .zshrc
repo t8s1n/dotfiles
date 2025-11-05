@@ -137,3 +137,17 @@ backup() {
 killp() {
     ps aux | grep "$1" | grep -v grep | awk '{print $2}' | xargs kill -9
 }
+
+# FOr Docker
+alias d='docker'
+alias dc='docker-compose'
+alias dps='docker ps'
+
+# npm
+alias ni='npm install'
+alias nid='npm install --save-dev'
+alias ns='npm start'
+alias nt='npm test'
+
+# directories syntax
+alias myproject='cd ~/projects/my-important-project'
