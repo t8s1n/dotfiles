@@ -44,6 +44,10 @@ source $ZSH/oh-my-zsh.sh
 # Custom PATH additions
 export PATH="$HOME/.npm-global/bin:$PATH"
 
+# Homebrew
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+
+
 # API Keys and Environment Variables
 export ANTHROPIC_API_KEY="your-key-here"
 
