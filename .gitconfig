@@ -1,0 +1,25 @@
+[user]
+    name = Jesse Oseafiana
+    email = your-email@example.com
+
+[core]
+    editor = cursor
+    autocrlf = input
+
+[init]
+    defaultBranch = main
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    unstage = reset HEAD --
+    last = log -1 HEAD
+    visual = log --oneline --graph --all
+
+[pull]
+    rebase = false
+
+[push]
+    default = simple
