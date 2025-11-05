@@ -192,3 +192,8 @@ alias personal='cd $PROJECTS/personal'
 alias work='cd $PROJECTS/work'
 alias learn='cd $PROJECTS/learning'
 alias play='cd $PROJECTS/playground'
+
+# Downloads organizer
+alias organize-downloads='python3 ~/projects/personal/downloads-organizer/organize.py'
+alias organize-dry='python3 ~/projects/personal/downloads-organizer/organize.py dry-run'
+alias organize-stats='python3 ~/projects/personal/downloads-organizer/organize.py stats'
