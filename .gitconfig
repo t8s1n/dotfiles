@@ -3,7 +3,7 @@
     email = jesse.o.oseafiana@pm.me
 
 [core]
-    editor = cursor --wait
+    editor = code --wait
     autocrlf = input
     excludesfile = ~/.gitignore_global
 
