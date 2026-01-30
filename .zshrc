@@ -201,3 +201,10 @@ alias play='cd $PROJECTS/playground'
 alias organize-downloads='python3 ~/projects/personal/downloads-organizer/organize.py'
 alias organize-dry='python3 ~/projects/personal/downloads-organizer/organize.py dry-run'
 alias organize-stats='python3 ~/projects/personal/downloads-organizer/organize.py stats'
+
+# pyenv configuration
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
