@@ -230,6 +230,7 @@ ani-season() {
         echo "Example: ani-season 'naruto' 1-12"
         return 1
     fi
+    
     ani-cli "$1" -d -e "${2:-1-12}"
 }
 
@@ -247,19 +248,27 @@ ani-update() {
 ani-check() {
     echo "Checking ani-cli setup..."
     echo ""
+    
     echo -n "ani-cli: "
     command -v ani-cli >/dev/null && echo "✓ Installed" || echo "✗ Missing"
+    
     echo -n "mpv: "
     command -v mpv.exe >/dev/null && echo "✓ Installed" || echo "✗ Missing"
+    
     echo -n "fzf: "
     command -v fzf >/dev/null && echo "✓ Installed" || echo "✗ Missing"
+    
     echo -n "aria2c: "
     command -v aria2c >/dev/null && echo "✓ Installed" || echo "✗ Missing"
+    
     echo -n "yt-dlp: "
     command -v yt-dlp >/dev/null && echo "✓ Installed" || echo "✗ Missing"
+    
     echo -n "patch: "
     command -v patch >/dev/null && echo "✓ Installed" || echo "✗ Missing"
+    
     echo ""
     echo "Quality setting: ${ANI_CLI_QUALITY:-not set}"
     echo "Download dir: ${ANI_CLI_DOWNLOAD_DIR:-current directory}"
 }
+export PATH="$HOME/.local/bin:$PATH"
