@@ -277,3 +277,8 @@ export PATH="$HOME/.local/bin:$PATH"
 if [[ -f ~/.zshrc.local ]]; then
     source ~/.zshrc.local
 fi
+
+# Dotfiles sync aliases
+alias dotsync='cd ~/projects/personal/dotfiles && git add . && git commit -m "Update dotfiles $(date +%Y-%m-%d)" && git push && cd -'
+alias dotpull='cd ~/projects/personal/dotfiles && git pull && source ~/.zshrc && cd -'
+alias dotstatus='cd ~/projects/personal/dotfiles && git status && cd -'
