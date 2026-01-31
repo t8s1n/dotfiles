@@ -208,3 +208,56 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init --path)"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# ani-cli settings
+export ANI_CLI_QUALITY=1080
+export ANI_CLI_DOWNLOAD_DIR="$HOME/Videos/Anime"
+export ANI_CLI_PLAYER=mpv
+
+# Aliases
+alias ani='ani-cli'
+alias anid='ani-cli --dub'
+alias anic='ani-cli -c'
+alias aniq='ani-cli -q'
+alias anidl='ani-cli -d'
+
+# Function to download full season
+ani-season() {
+    if [ -z "$1" ]; then
+        echo "Usage: ani-season 'anime name' start-end"
+        echo "Example: ani-season 'naruto' 1-12"
+        return 1
+    fi
+    ani-cli "$1" -d -e "${2:-1-12}"
+}
+
+# Function to continue last anime
+ani-last() {
+    ani-cli -c
+}
+
+# Update ani-cli
+ani-update() {
+    sudo ani-cli -U
+}
+
+# Check ani-cli setup
+ani-check() {
+    echo "Checking ani-cli setup..."
+    echo ""
+    echo -n "ani-cli: "
+    command -v ani-cli >/dev/null && echo "✓ Installed" || echo "✗ Missing"
+    echo -n "mpv: "
+    command -v mpv.exe >/dev/null && echo "✓ Installed" || echo "✗ Missing"
+    echo -n "fzf: "
+    command -v fzf >/dev/null && echo "✓ Installed" || echo "✗ Missing"
+    echo -n "aria2c: "
+    command -v aria2c >/dev/null && echo "✓ Installed" || echo "✗ Missing"
+    echo -n "yt-dlp: "
+    command -v yt-dlp >/dev/null && echo "✓ Installed" || echo "✗ Missing"
+    echo -n "patch: "
+    command -v patch >/dev/null && echo "✓ Installed" || echo "✗ Missing"
+    echo ""
+    echo "Quality setting: ${ANI_CLI_QUALITY:-not set}"
+    echo "Download dir: ${ANI_CLI_DOWNLOAD_DIR:-current directory}"
+}
