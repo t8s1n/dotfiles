@@ -31,6 +31,8 @@ setopt HIST_IGNORE_SPACE
 # Plugins
 plugins=(
   git
+  python
+  pip
   zsh-autosuggestions
   zsh-syntax-highlighting
   zsh-completions
