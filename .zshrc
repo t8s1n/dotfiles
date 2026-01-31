@@ -214,7 +214,7 @@ eval "$(pyenv virtualenv-init -)"
 # ani-cli settings
 export ANI_CLI_QUALITY=1080
 export ANI_CLI_DOWNLOAD_DIR="$HOME/Videos/Anime"
-export ANI_CLI_PLAYER=mpv
+export ANI_CLI_PLAYER=/mnt/c/Users/jesse/scoop/apps/mpv/current/mpv.exe
 
 # Aliases
 alias ani='ani-cli'
