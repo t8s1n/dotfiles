@@ -272,3 +272,8 @@ ani-check() {
     echo "Download dir: ${ANI_CLI_DOWNLOAD_DIR:-current directory}"
 }
 export PATH="$HOME/.local/bin:$PATH"
+
+# Machine-specific overrides
+if [[ -f ~/.zshrc.local ]]; then
+    source ~/.zshrc.local
+fi
